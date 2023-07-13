@@ -19,15 +19,16 @@ let pagination;
 // проверка на количество книг при удалении и обновление данных в
 //пагинации, удаление блока пагинации если книг меньше 4
 export function resetPag(i) {
-  if (i <= 3) {
-    pagination = null;
-    try {
-      const p = document.querySelector('#tui-pagination-container');
-      p.remove();
-    } catch (err) {
-      console.log(err);
-    }
-  } else pagination.setTotalItems(i);
+  // if (i <= 3) {
+  //   pagination = null;
+  //   try {
+  //     const p = document.querySelector('#tui-pagination-container');
+  //     p.remove();
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // } else
+  pagination.setTotalItems(i);
 }
 
 //начальная проверка на необходимость пагинации
